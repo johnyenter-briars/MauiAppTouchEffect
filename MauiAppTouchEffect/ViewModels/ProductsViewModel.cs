@@ -10,7 +10,7 @@ public class ProductsViewModel
     public ProductsViewModel()
     {
         Products = Enumerable
-            .Range(1, 3)
+            .Range(0, 20)
             .Select(x => new Product
             {
                 Id = x,
