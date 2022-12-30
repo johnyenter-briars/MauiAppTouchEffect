@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewmodels="clr-namespace:MauiAppTouchEffect.ViewModels;assembly=MauiAppTouchEffect"
+             xmlns:models="clr-namespace:MauiAppTouchEffect.Models;assembly=MauiAppTouchEffect"
+             x:Class="MauiAppTouchEffect.Views.ProductsPage"
+             x:DataType="viewmodels:ProductsViewModel">
+    <CollectionView ItemsSource="{Binding Products}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Product">
+                <Label Text="{Binding Description}"
+                       FontSize="Large"
+                       xct:TouchEffect.NormalBackgroundColor="Blue"
+                       xct:TouchEffect.PressedBackgroundColor="Red" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
